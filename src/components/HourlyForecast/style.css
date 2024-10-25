@@ -1,0 +1,6 @@
+.hourly-forecast {
+    display: flex;
+    border: 1px solid #ccc;
+    justify-content: space-evenly;
+  }
+  
