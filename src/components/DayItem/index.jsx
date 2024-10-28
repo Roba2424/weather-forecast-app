@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { getWeatherIcon } from "../../core/functions/date-function";
 
 const DayItem = ({ day }) => {
   const weatherIcon = day.weather[0].icon;
@@ -9,7 +9,7 @@ const DayItem = ({ day }) => {
       <p>High: {Math.round(day.main.temp_max)}°C</p>
       <p>Low: {Math.round(day.main.temp_min)}°C</p>
       <img
-        src={`http://openweathermap.org/img/wn/${weatherIcon}@2x.png`}
+        src={getWeatherIcon(weatherIcon)}
         alt={day.weather[0].description}
       />
       <p>{day.weather[0].description}</p>
